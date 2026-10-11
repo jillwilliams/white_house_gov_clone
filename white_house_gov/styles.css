@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: aliceblue;
+    font-family: "Iceland";
+}
+
+.banner-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: aliceblue;
+    color: #454545;
+    padding: 25px 0;
+    font-family: "Iceland";
+    font-size: 15px;
+    display: inline-block;
+    justify-content: space-between;
+    gap: 40px;
+    padding-right: 40px;
+}
+
+.banner-track {
+    display: flex;
+    width: max-content;
+    padding-right: 25%;
+    animation: scroll-left 20s linear infinite;
+}
+
+.banner-track span {
+    /* white-space: nowrap; */
+    padding-right: 50px;
+}
+
+.banner-container:hover .banner-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* ===========end of marquee================= */
+
+/* the middle navbar */
+.navbar {
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    margin-top: 20px;
+}
+
+/* the menu side */
+.left-side {
+    display: flex;
+    margin-left: 20px;
+}
+
+/* the text: menu */
+.left-side h5 {
+    margin-left: 10px;
+}
+
+/* the wh eagle logo */
+.middle img {
+    width: 80px;
+}
+
+/* right side with search */
+.right-side {
+    display: flex;
+}
+
+/* text: search */
+.right-side h5 {
+    margin-right: 10px;
+}
+
+/* the magnifying glass */
+.right-side i {
+    margin-right: 20px;
+}
+
+/* ================end navbar one=================== */
+
+/* ================navbar scroll ============ */
+.navbar-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.navbar-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    scroll-behavior: smooth;
+    flex-grow: 1;
+}
+
+.navbar-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
+}
+
+.arrow-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+/* ===============video================== */
+
+.background-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;   
+    height: 100vh;  
+    border: none;   
+    margin-top: 200px;
+}
+
+.content-container {
+    position: relative;
+    z-index: 1; 
+    color: #ffffff;
+    padding: 40px;
+    max-width: 600px;
+}
