@@ -7,14 +7,15 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background-color: aliceblue;
+    background-color: white;
     font-family: "Iceland";
+    position: relative;
 }
 
 .banner-container {
     overflow: hidden;
     width: 100%;
-    background-color: aliceblue;
+    background-color: white;
     color: #454545;
     padding: 25px 0;
     font-family: "Iceland";
@@ -23,6 +24,10 @@ body {
     justify-content: space-between;
     gap: 40px;
     padding-right: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
 }
 
 .banner-track {
@@ -30,6 +35,7 @@ body {
     width: max-content;
     padding-right: 25%;
     animation: scroll-left 20s linear infinite;
+    
 }
 
 .banner-track span {
@@ -51,15 +57,25 @@ body {
 }
 /* ===========end of marquee================= */
 
-/* the middle navbar */
+/* the middle navbar: menu,logo search */
 .navbar {
     width: 100%;
     background: transparent;
     display: flex;
     justify-content: space-between;
-    color: black;
+    color: white;
     margin-top: 20px;
+    top: 65px;
+    left: 0;
+    position: fixed;
 }
+
+/*  */
+.navbar.active {
+    background-color: white;
+    color: black;
+}
+
 
 /* the menu side */
 .left-side {
@@ -95,20 +111,28 @@ body {
 /* ================end navbar one=================== */
 
 /* ================navbar scroll ============ */
+/* =====news, gallery, live stream,.....=========== */
 .navbar-wrapper {
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
+    padding-top: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
 }
 
 .navbar-container {
     overflow-x: auto;
     white-space: nowrap;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
     scroll-behavior: smooth;
     flex-grow: 1;
+
 }
 
 .navbar-container::-webkit-scrollbar {
@@ -122,12 +146,14 @@ body {
     margin: 0;
     padding: 0;
     background: transparent;
+    
 }
 
 .nav-list a {
     text-decoration: none;
-    color: black;
-    margin-right: 30px;
+    color: white;
+    margin-right: 115px;
+    margin-left: 20px;
 }
 
 .arrow-btn {
@@ -135,25 +161,118 @@ body {
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
-    padding: 0.5rem;
+    padding: 1rem;
+    color: white;
 }
 
 /* ===============video================== */
 
 .background-iframe {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;   
     height: 100vh;  
     border: none;   
-    margin-top: 200px;
+    margin-top: 0px;
+    z-index: -1;
 }
 
+/* the buttons div */
 .content-container {
     position: relative;
-    z-index: 1; 
-    color: #ffffff;
+    z-index: 1000; 
+    color: red;
     padding: 40px;
-    max-width: 600px;
+    margin-top: -160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* BUTTON: JOIN NOW */
+.content-container .join-now {
+    background-color: rgb(165,0,3);
+    padding: 10px;
+    border-radius: 30px;
+    width: 120px;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20px;
+    bottom: 50px;
+    position: fixed;
+    z-index: 1000;
+    
+}
+
+/* button: freedom 250 events */
+.content-container .events {
+    margin-left: 500px;
+    font-style: italic;
+    background-color: rgb(119,14,20);
+    padding: 10px;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    right: 20px;
+    bottom: 60px;
+    position: fixed;
+    z-index: 1000;
+}
+
+/* =============letter from Trump================= */
+.template1 { 
+    width: 100%;
+    background-color: white;
+    margin-top: 920px;
+    max-width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
+
+}
+
+.letter-text img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* the letter's words */
+.letter .letter-text h5 {
+    letter-spacing: 2px;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+/* text: Donald J. Trump */
+.letter .letter-text h2 {
+    text-align: center;
+}
+
+/* text: 45 & 47 ....*/
+.letter .letter-text h4 {
+    text-align: center;
+}
+
+/* trump signature */
+.letter-text img {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+
 }
