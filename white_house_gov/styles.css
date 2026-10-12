@@ -27,7 +27,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-
+    z-index: 1000;
 }
 
 .banner-track {
@@ -35,7 +35,6 @@ body {
     width: max-content;
     padding-right: 25%;
     animation: scroll-left 20s linear infinite;
-    
 }
 
 .banner-track span {
@@ -55,27 +54,28 @@ body {
         transform: translateX(-50%);
     }
 }
-/* ===========end of marquee================= */
 
-/* the middle navbar: menu,logo search */
+/* ===========end of marquee================= */
+/* =======the middle navbar: menu,logo search====== */
+
 .navbar {
     width: 100%;
     background: transparent;
     display: flex;
     justify-content: space-between;
     color: white;
-    margin-top: 20px;
+    padding-top: 20px;
     top: 65px;
     left: 0;
     position: fixed;
+    z-index: 1000;
 }
 
-/*  */
-.navbar.active {
+/* scrolling js */
+.navbar.scrolled {
     background-color: white;
     color: black;
 }
-
 
 /* the menu side */
 .left-side {
@@ -109,9 +109,9 @@ body {
 }
 
 /* ================end navbar one=================== */
-
-/* ================navbar scroll ============ */
+/* ================navbar============ */
 /* =====news, gallery, live stream,.....=========== */
+
 .navbar-wrapper {
     display: flex;
     align-items: center;
@@ -122,7 +122,6 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-
 }
 
 .navbar-container {
@@ -132,7 +131,6 @@ body {
     -ms-overflow-style: none; 
     scroll-behavior: smooth;
     flex-grow: 1;
-
 }
 
 .navbar-container::-webkit-scrollbar {
@@ -146,7 +144,6 @@ body {
     margin: 0;
     padding: 0;
     background: transparent;
-    
 }
 
 .nav-list a {
@@ -167,15 +164,18 @@ body {
 
 /* ===============video================== */
 
-.background-iframe {
+.image img {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;   
-    height: 100vh;  
+    max-height: 100vh;  
     border: none;   
     margin-top: 0px;
     z-index: -1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* the buttons div */
@@ -206,7 +206,6 @@ body {
     bottom: 50px;
     position: fixed;
     z-index: 1000;
-    
 }
 
 /* button: freedom 250 events */
@@ -231,30 +230,34 @@ body {
     z-index: 1000;
 }
 
+/* =========== start template1 ================== */
 /* =============letter from Trump================= */
+
 .template1 { 
     width: 100%;
     background-color: white;
     margin-top: 920px;
     max-width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 100px;
-
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 140px;
+    margin-bottom: 70px;
 }
 
+/* trump signature */
 .letter-text img {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 70px;
 }
 
 /* the letter's words */
 .letter .letter-text h5 {
     letter-spacing: 2px;
     font-size: 20px;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 
 /* text: Donald J. Trump */
@@ -274,5 +277,341 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
+    margin-bottom: 70px;
+}
 
+/* =====================start border patrol section============== */
+/* ======================template 2============================== */
+
+.template2 {
+    width: 100%;
+    min-height: 70vh;
+    border-bottom: 5px white solid;
+    color: white;
+}
+
+.t2-iframe-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 800px; */
+}
+
+/* the border-patrol video */
+.template2 .t2-iframe-container iframe {
+    display: block;
+    width: 100vw;   
+    height: 100vh;  
+    border: none;   
+    margin-top: -70px;
+    z-index: -1;
+    border: 5px solid white;
+}
+
+/* secure our border */
+.text-overlay {
+    position: absolute;
+    right: 40px;
+    bottom: 100px;
+    z-index: 10;
+}
+
+/* =====================start protect our country============== */
+/* ======================template 3============================== */
+.template3 {
+    width: 100%;
+    min-height: 70vh;
+    border-bottom: 5px white solid;
+    color: white;
+}
+
+.t3-iframe-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 800px; */
+}
+
+/* the border-patrol video */
+.template3 .t3-iframe-container iframe {
+    display: block;
+    width: 100vw;   
+    height: 100vh;  
+    border: none;   
+    margin-top: -70px;
+    z-index: -1;
+    border: 5px solid white;
+}
+
+.t3-text-overlay {
+    position: absolute;
+    right: 40px;
+    bottom: 100px;
+    z-index: 10;
+}
+
+/* ===============trump accounts============ */
+/* ==============template 4================= */
+
+.template4 {
+    width: 100%;
+    min-height: 70vh;
+    border-bottom: 5px white solid;
+    color: white;
+}
+
+.t4-iframe-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 800px; */
+}
+
+/* the border-patrol video */
+.template4 .t4-iframe-container iframe {
+    display: block;
+    width: 100vw;   
+    height: 100vh;  
+    border: none;   
+    margin-top: -70px;
+    z-index: -1;
+    border: 5px solid white;
+}
+
+.t4-text-overlay {
+    position: absolute;
+    right: 40px;
+    bottom: 200px;
+    z-index: 10;
+}
+
+/* text: trump accounts */
+.t4-iframe-container .t4-text-overlay h4 {
+    color: white;
+}
+
+/* ===========unleash american energy=============== */
+/* =================template 5====================== */
+
+.template5 {
+    width: 100%;
+    min-height: 70vh;
+    border-bottom: 5px white solid;
+    color: white;
+}
+
+.t5-iframe-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 800px; */
+}
+
+/* the border-patrol video */
+.template5 .t5-iframe-container iframe {
+    display: block;
+    width: 100vw;   
+    height: 100vh;  
+    border: none;   
+    margin-top: -70px;
+    z-index: -1;
+    border: 5px solid white;
+}
+
+.t5-text-overlay {
+    position: absolute;
+    right: 40px;
+    bottom: 100px;
+    z-index: 10;
+}
+
+/* ===========make america healthy again=============== */
+/* =================template 6========================= */
+
+.template6 {
+    width: 100%;
+    min-height: 70vh;
+    border-bottom: 5px white solid;
+    color: white;
+}
+
+.t6-iframe-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 800px; */
+}
+
+/* the border-patrol video */
+.template6 .t6-iframe-container iframe {
+    display: block;
+    width: 100vw;   
+    height: 100vh;  
+    border: none;   
+    margin-top: -70px;
+    z-index: -1;
+    border: 5px solid white;
+}
+
+.t6-text-overlay {
+    position: absolute;
+    right: 40px;
+    bottom: 100px;
+    z-index: 10;
+}
+
+/* ===================footer section================= */
+/* ============template 7============================ */
+
+.template7 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(11,14,33);
+}
+
+.t7-container {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    padding-top: 50px;
+    margin-left: 20px;
+}
+
+/* column 1  */
+.column-one h5 {
+    padding: 10px;
+}
+
+/* column 2 */
+.column-two h5 {
+    padding: 10px;
+}
+
+/* column 3 */
+.column-three h5 {
+    padding: 10px;
+}
+
+/* column four */
+.column-four h4 {
+    margin-bottom: 20px;
+}
+
+.email {
+    display: flex;
+}
+
+/* email form */
+.email .email-form {
+    background-color: rgb(11,14,33);
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+/* the text: sign up */
+.email h5 {
+    padding-left: 20px;
+}
+
+/* click here text */
+.click-here {
+    margin-top: 10px;
+}
+
+/* text or text... */
+.click-here h5 {
+    font-size: 20px;
+}
+
+/* text: click here.... */
+.click-here h5 a {
+    color: white;
+    font-size: 20px;
+}
+
+/* text: download the wh app...*/
+.download-section h5 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* the app store/google play buttons */
+.apple-store {
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 15px;
+}
+
+.google-play {
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+/* get updates div */
+.get-updates {
+    display: flex;
+    margin-top: 50px;
+}
+
+/* text: get updates... */
+.updates h5 {
+    font-size: 20px;
+}
+
+/* available div */
+.available {
+    display: flex;
+    flex-direction: column;
+}
+
+/* text: available now */
+.available h5 {
+    margin-left: 30px;
+    font-size: 10px;
+}
+
+/* icons available on */
+.available .icons {
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+/* available icons */
+.icons {
+    display: flex;
+}
+
+/* button download browser */
+.browser-ext {
+    display: flex;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+/* last line div */
+.last-line {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+/* text: the white house */
+.white-house h1 {
+    margin-bottom: 100px;
+    margin-left: -600px;
+}
+
+/* icons div */
+.last-line .more-icons {
+    margin-right: -600px;
+}
+
+.last-line .more-icons i {
+    margin-right: 40px;
+    color: white;
 }
