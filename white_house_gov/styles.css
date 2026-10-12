@@ -38,7 +38,6 @@ body {
 }
 
 .banner-track span {
-    /* white-space: nowrap; */
     padding-right: 50px;
 }
 
@@ -118,10 +117,10 @@ body {
     position: relative;
     width: 100%;
     padding-top: 120px;
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1000; */
 }
 
 .navbar-container {

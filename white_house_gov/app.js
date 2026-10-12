@@ -1,3 +1,5 @@
+// this is for the news,gallery,live stream.... 
+
 const navContainer = document.getElementById('navContainer');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -20,10 +22,9 @@ prevBtn.addEventListener('click', () => {
 
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 710) {
+    if (window.scrollY > 900) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
 });
-
