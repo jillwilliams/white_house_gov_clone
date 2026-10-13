@@ -377,7 +377,7 @@ body {
 .t4-text-overlay {
     position: absolute;
     right: 40px;
-    bottom: 200px;
+    bottom: 100px;
     z-index: 10;
 }
 
